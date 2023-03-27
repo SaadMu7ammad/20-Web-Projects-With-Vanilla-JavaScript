@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Delicious+Handrawn&display=swap');
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Alkatra', cursive;
+}
+.content {
+  background-color: #242333;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin:100px auto; */
+  height: 100vh;
+}
+.moviesSelections select {
+  padding: 5px 10px 5px 10px;
+  border-radius: 7px;
+  margin-left: 2px;
+  font-size: 14px;
+}
+.seatsWithScreen {
+  perspective: 1000px;/*for th screen cinema*/
+}
+.seat {
+  background-color: grey;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+}
+.seats {
+  display: flex;
+}
+.seats > :nth-child(3) {
+  margin-left: 10px;
+}
+.seats > :nth-last-child(2) {
+  margin-left: 10px;
+}
+p {
+  margin-top: 20px;
+}
+p span {
+  color: aqua;
+}
+.toolbar ul {
+  margin: 10px 0px 10px 0px;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  text-align: center;
+  background-color: #2f2e2e;
+  border-radius: 3px;
+}
+
+.toolbar ul li {
+  text-align: center;
+  padding: 5px;
+  display: flex;
+}
+.seat.occupied {
+  background-color: white;
+}
+.seat.selected {
+  background-color: aqua;
+}
+
+.seatsWithScreen .seats .row .seat:hover {
+  /* background-color: red; */
+  cursor: pointer;
+  transform: scale(1.5);
+}
+.seatsWithScreen .seats .row .seat.occupied:hover {
+  /* not change the scale od the occupied seats*/
+  cursor: default;
+  transform: scale(1);
+}
+
+.screen {
+  background-color: white;
+  box-shadow: 0 3px 10px white;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 5px;
+  transform: rotateX(-45deg);
+}
