@@ -1,0 +1,78 @@
+:root {
+  --primaryColor: #5fbaa7;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.img {
+  /* width: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 50%;
+}
+.from {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.to {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.swap {
+  margin: 10px 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.swap div {
+  color: var(--primaryColor);
+  text-align: center;
+  /* padding-right: 20px; */
+}
+.content {
+  text-align: center;
+}
+button {
+  padding: 5px 10px 5px 10px;
+  background-color: var(--primaryColor);
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+select {
+  padding: 5px 10px 5px 10px;
+}
+input {
+  border: 0px solid transparent;
+  text-align: right;
+  font-size: 20px;
+}
+
+select:focus,input:focus,button:focus{
+  outline: 0;
+}
+@media (max-width:600px) {
+  .from{
+    width: 200px;
+  }
+  .to{
+    width: 200px;
+  }
+  .swap{
+    width: 300px;
+  }
+}
