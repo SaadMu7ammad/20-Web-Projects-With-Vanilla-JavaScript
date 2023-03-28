@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+  box-sizing: border-box;
+}
+:root {
+  --modal_duration: 1s;
+  --primary-color: #30336b;
+  --sec-color: #be2edd;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  transition: transform 0.3s ease;
+}
+nav {
+  background-color: var(--primary-color);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 10;
+  transform: translateX(-100%);
+}
+body.show-nav {
+  /* transform: translateX(50%); */
+  /* 200px coz the width of nav is 200px so we translate to be the full nav shown in the window */
+  transform: translateX(200px);
+}
+nav .img {
+  text-align: center;
+}
+nav img {
+  border-radius: 50%;
+  width: 100px;
+  margin: 20px;
+}
+nav ul {
+  color: white;
+  list-style-type: none;
+  /* text-align: center; */
+  padding: 0;
+}
+nav ul li {
+  border-bottom: solid 1px grey;
+  margin: 20px 0;
+  padding: 10px;
+}
+nav ul li:first-of-type {
+  border-top: solid 1px grey;
+  /* margin: 20px 0; */
+  padding-top: 20px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* header */
+.header-sign {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: large;
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  background-color: var(--sec-color);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+button:focus {
+  outline: 0;
+}
+.toggle {
+  background-color: #e5e4e41c;
+  position: absolute;
+  left: 20px;
+}
+
+.signup {
+  font-size: 20px;
+}
+/* the container section */
+.container {
+  padding: 10px;
+  margin: 0 auto;
+  width: 700px;
+  max-width: 100%;
+}
+/* modal container */
+.modal-container {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* text-align: center; */
+  animation-name: modalOpen;
+  animation-duration: var(--modal_duration);
+}
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 400px;
+  max-width: 100%;
+  border-radius: 5px;
+}
+.modal-header {
+  padding: 0 30px 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+}
+.modal-content {
+  margin: 20px;
+}
+.modal-content div {
+  margin: 20px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  max-width: 100%;
+}
+.modal-form {
+  display: block;
+  text-align: left;
+  /* max-width: 100%; */
+}
+.modal-form div {
+  width: 100%;
+}
+.modal-form input {
+  /* text-align: left; */
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  border-top: none;
+  margin-top: 5px;
+  width: 90%;
+  /* max-width: 100%; */
+}
