@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  font-family: 'Lato';
+}
+.container {
+  margin: 20px auto;
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+}
+.sub-headings {
+  text-align: left;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.income {
+  border-right: 1px solid #bbb;
+}
+.income h4,
+.income p,
+.expense h4,
+.expense p {
+  margin: 0;
+}
+.income,
+.expense {
+  width: 50%;
+  font-size: 20px;
+}
+.income p {
+  color: #2ecc71;
+  font-size: 30px;
+}
+.expense p {
+  color: red;
+  font-size: 30px;
+}
+
+.history,
+.transaction-heading {
+  font-weight: 700;
+  padding-bottom: 10px;
+  text-align: left;
+  border-bottom: 1px solid #bbb;
+}
+
+ul li .delbtn {
+  cursor: pointer;
+  background-color: red;
+  box-shadow: var(--box-shadow);
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  /* display: none; */
+  position: absolute;
+  left: -26px;
+  padding: 10px;
+  top: 3px;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  
+}
+li {
+  box-shadow: var(--box-shadow);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 10px;
+}
+
+li:hover .delbtn {
+  opacity: 1;
+  /* display: inline-block; */
+  transition: 0.5s ease-in-out;
+
+}
+.plus span:nth-child(2)::after {
+  position: absolute;
+  content: '';
+  background-color: #2ecc71;
+  width: 4px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.minus span:nth-child(2)::after {
+  position: absolute;
+  content: '';
+  background-color: red;
+  width: 4px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.form {
+  text-align: left;
+}
+.form button {
+  width: 100%;
+  margin-top: 20px;
+  background-color: purple;
+  color: white;
+  border: 0;
+  border-radius: 2px;
+  padding: 10px;
+  /* box-shadow: var(--box-shadow); */
+  cursor: pointer;
+
+}
+.text input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dedede
+}
+@media(max-width:250px)  {
+  .income,
+.expense {
+  width: 45%;
+  font-size: 10px;
+}
+.income p,
+.expense p {
+  /* width: 25%; */
+  font-size: 15px;
+}
+}
