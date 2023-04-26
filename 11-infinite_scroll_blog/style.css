@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(68, 68, 185);
+  color: white;
+  font-family: 'Roboto', 'san-serif';
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  width: 100%;
+  padding: 10px;
+margin-bottom: 20px;
+  border: 0;
+  border-radius: 15px;
+}
+.post {
+  width: 100%;
+  background-color: #4992d3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 30px 0;
+  position: relative;
+}
+.post .number {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  background-color: white;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.562);
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 3dots */
+.loader{
+  /* position: fixed; */
+  display: flex;
+  justify-content: space-between;
+  width: 40px;
+  margin: 0 auto;
+  transition: opacity 0.3s linear;
+  opacity: 0;
+
+}
+.circle{
+  background-color: white;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.562);
+  /* padding: 10px; */
+  width: 10px;
+  height: 10px;
+  animation: bounce 0.5s ease-in infinite ;
+}
+.loader.show{
+  opacity: 1;
+}
+
+.circle:nth-child(2){
+  animation-delay: 0.1s;
+
+}
+.circle:nth-child(3){
+  animation-delay: 0.2s;
+
+}
+@keyframes bounce {
+  0%,100%{
+    transform: translateY(0);
+  }
+ 50%{
+    transform: translateY(-10px);
+  }
+}
