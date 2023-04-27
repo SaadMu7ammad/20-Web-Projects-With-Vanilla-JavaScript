@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #2c3e50;
+  /* height: 100vh; */
+  /* position: relative; */
+  color: white;
+  position: relative;
+}
+.container {
+  margin: 0 auto;
+  max-width: 550px;
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar {
+  background-color: rgba(0, 0, 0, 0.356);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(0);
+  transition: transform 03s ease-in;
+  text-align: left;
+}
+.bar.hide {
+  transform: translateY(-1000%);
+  /* transition: transform 03s ease-in; */
+}
+.bar select {
+
+  padding: 5px;
+  max-width: 200px;
+  appearance: none;
+  margin-left: 5px;
+  height: fit-content;
+  outline: 0;
+  width: 100%;
+}
+
+.box {
+  padding: 20px;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  align-items: center;
+  background-color: #354d66;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.box .sub-bar {
+  background-color: rgba(0, 0, 0, 0.267);
+  font-size: 25px;
+  font-weight: 800;
+  padding: 5px;
+  border-radius: 5px;
+}
+.box .sec-sub-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.box .third-sub-bar h2,
+.box .third-sub-bar p {
+  margin: 0;
+}
+.box .third-sub-bar h2 {
+  margin-top: 6px;
+
+  /*PREVENT HACKING :)>> to not select and drag it without type it  */
+  user-select: none;
+}
+.box .third-sub-bar input {
+  margin-top: 10px;
+  padding: 10px;
+
+  border-radius: 5px;
+  border: 0;
+  width: 50%;
+  outline: 0;
+}
+
+.btn button {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+}
