@@ -18,6 +18,8 @@ form.addEventListener('submit', (e) => {
       result.querySelector('p').innerHTML = 'NOT FOUND A RESULT';
     }); //if the api not found a result
 });
+
+//surah means a chapter
 // console.log(verse.surah.name);
 // console.log(verse.surah.englishName);
 // console.log(verse.surah.englishNameTranslation);
