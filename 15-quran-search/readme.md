@@ -1,6 +1,6 @@
-## LyricsSearch App
+## QuranSearch App
 
-Find songs, artists and lyrics using the [Quran API Documentation](https://alquran.cloud/api) API
+Find verses, words and chapter using the [Quran API Documentation](https://alquran.cloud/api) API
 
 ## Project Specifications
 
