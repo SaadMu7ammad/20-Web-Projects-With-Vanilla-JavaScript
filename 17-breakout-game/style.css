@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0095dd;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  color: #fff;
+}
+canvas {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.rules-btn {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  cursor: pointer;
+  border: 0;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+.rules-btn:active {
+  transform: scale(0.89);
+}
+.close-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+.close-btn:active {
+  transform: scale(0.89);
+}
+.rules-bar {
+  line-height: 1.5;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  width: 350px;
+  min-height: 100vh;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  transform: translateX(-400px);
+  transition: transform 1s ease-in-out;
+}
+
+.rules-bar.show {
+  transform: translate(-1%);
+}
+
+.winner {
+  border: 1px solid rgba(0, 0, 0, 0.281);
+  border-radius: 5px;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #0095dd;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: larger;
+  display: none;
+}
+.again-btn-winner {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.winner.show {
+  display: flex;
+}
+
+.loser {
+  border: 1px solid rgba(0, 0, 0, 0.281);
+  border-radius: 5px;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #0095dd;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: larger;
+  display: none;
+}
+.again-btn-loser {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.loser.show {
+  display: flex;
+}
