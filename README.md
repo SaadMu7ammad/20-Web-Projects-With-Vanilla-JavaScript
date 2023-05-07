@@ -1,2 +1,2 @@
-# 20Projects_js
-practice on js
+# 20-Web-Projects-With-Vanilla-JavaScript
+
